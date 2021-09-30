@@ -1,0 +1,337 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$primary-color: #62c7c7;
+* {
+  font-family: Poppins;
+}
+
+body {
+  background-color: rgb(218, 210, 210);
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: #fff;
+  padding: 0;
+  z-index: 2;
+  position: fixed;
+
+  .container-fluid {
+    width: 100vw;
+    padding: 10px 30px;
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      .nav-icon {
+        display: none;
+
+        @include media-breakpoint-down(sm) {
+          display: inline;
+        }
+      }
+      .logo {
+        cursor: pointer;
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 30px;
+        font-weight: bold;
+
+        @include media-breakpoint-down(sm) {
+          margin-left: 10px;
+          font-size: 25px;
+        }
+      }
+    }
+
+    .nav-right {
+      margin: 10px 0 0 0;
+      display: flex;
+      align-content: center;
+      .nav-user {
+        span {
+          color: $primary-color;
+        }
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+        border-radius: 50%;
+        @include media-breakpoint-down(sm) {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+}
+
+.sidebar {
+  background-color: #fff;
+  height: 100vh;
+  width: 300px;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  padding: 90px 0 0 20px;
+
+  @include media-breakpoint-down(sm) {
+    left: -300px;
+    transition: all 0.8s ease;
+
+    &.active {
+      left: 0;
+    }
+  }
+  .nav-item {
+    margin-bottom: 15px;
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      padding: 0;
+      color: black;
+      font-weight: Normal;
+      &.active {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.content {
+  @include media-breakpoint-down(sm) {
+    overflow-x: hidden;
+  }
+}
+.content-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  margin: 100px 0 25px 0;
+  padding: 10px 20px;
+  border-radius: 20px;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left {
+    h2 {
+      font-weight: bold;
+      color: $primary-color;
+      margin-bottom: 0;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 35px;
+      }
+    }
+    p {
+      @include media-breakpoint-down(sm) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      margin-left: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .find {
+      position: relative;
+      align-items: center;
+      display: flex;
+
+      @include media-breakpoint-down(sm) {
+        height: 100%;
+        width: 100%;
+      }
+
+      input {
+        padding: 10px;
+        border: solid 1px rgb(204, 201, 201);
+        outline: none;
+        padding-left: 40px;
+
+        @include media-breakpoint-down(sm) {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .bi {
+        position: absolute;
+        top: 0.8rem;
+        left: 0.5rem;
+        pointer-events: none;
+        color: $primary-color;
+      }
+    }
+
+    .add {
+      margin-left: 20px;
+      height: 100%;
+      width: 100%;
+
+      @include media-breakpoint-down(sm) {
+        margin-top: 10px;
+        margin-left: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      button {
+        background-color: $primary-color;
+        border: solid 1px $primary-color;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        outline: none;
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint-down(sm) {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .bi {
+        margin-left: 20px;
+        @include media-breakpoint-down(sm) {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  border-radius: 20px;
+  height: 420px;
+
+  @include media-breakpoint-down(sm) {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  &.loading {
+    height: auto;
+  }
+  .card-head {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 0;
+    border-bottom: 2px solid rgb(204, 201, 201);
+
+    h2 {
+      font-size: 15px;
+      @include media-breakpoint-down(sm) {
+        font-size: 13px;
+      }
+      span {
+        color: $primary-color;
+      }
+    }
+
+    button {
+      position: absolute;
+      top: 10%;
+      right: 5%;
+      background-color: transparent;
+      outline: none;
+      border: none;
+    }
+  }
+
+  .card-body {
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      align-items: center;
+    }
+    .card-body-photo {
+      margin-bottom: 10px;
+      text-align: center;
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+
+        @include media-breakpoint-down(sm) {
+          width: 120px;
+          height: 120px;
+          margin-right: 20px;
+        }
+      }
+      .dot {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+    }
+    .card-body-detail {
+      h2 {
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+      p {
+        font-size: 15px;
+        font-weight: lighter;
+        margin-bottom: 5px;
+      }
+      @include media-breakpoint-down(sm) {
+        h2:nth-child(n + 5) {
+          display: none;
+        }
+        p:nth-child(n + 5) {
+          display: none;
+        }
+        h2,
+        p {
+          font-size: 14px;
+          // margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  .page-item {
+    &.disabled {
+      background-color: transparent;
+      border: none;
+      cursor: no-drop;
+      color: grey;
+      .page-link {
+        background-color: transparent;
+      }
+    }
+  }
+  .page-link {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: black;
+  }
+}
