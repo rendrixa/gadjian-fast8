@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navbar } from "./Navbar";
+import { Sidebar } from "./Sidebar";
 
 export const Header = () => {
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -56,7 +56,7 @@ export const Header = () => {
           </div>
         </div>
       </header>
-      <Navbar openSidebar={openSidebar} setOpenSidebar={setOpenSidebar} />
+      <Sidebar openSidebar={openSidebar} setOpenSidebar={setOpenSidebar} />
     </>
   );
 };

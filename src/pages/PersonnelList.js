@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { CardItem } from "../components/CardItem";
+import { Sidebar } from "../components/Sidebar";
 import { Header } from "../components/Header";
-import { Navbar } from "../components/Navbar";
 import { Pagination } from "../components/Pagination";
 import { Head } from "../components/Head";
 
@@ -43,8 +43,8 @@ export const PersonnelList = () => {
   return (
     <>
       <Header />
+      <Sidebar />
       <div className="row">
-        <Navbar />
         <div className="col-lg-3 col-md-3 col-sm-0"></div>
         <div className=" col-lg-9 col-md-9 col-sm-12 content">
           <div className="container">

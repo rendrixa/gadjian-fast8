@@ -30,6 +30,7 @@ body {
           display: inline;
         }
       }
+
       .logo {
         cursor: pointer;
         text-decoration: none;
@@ -48,10 +49,12 @@ body {
       margin: 10px 0 0 0;
       display: flex;
       align-content: center;
+
       .nav-user {
         span {
           color: $primary-color;
         }
+
         @include media-breakpoint-down(sm) {
           display: none;
         }
@@ -62,6 +65,7 @@ body {
         height: 40px;
         margin-left: 20px;
         border-radius: 50%;
+
         @include media-breakpoint-down(sm) {
           width: 35px;
           height: 35px;
@@ -89,6 +93,7 @@ body {
       left: 0;
     }
   }
+
   .nav-item {
     margin-bottom: 15px;
 
@@ -99,6 +104,7 @@ body {
       padding: 0;
       color: black;
       font-weight: Normal;
+
       &.active {
         color: $primary-color;
       }
@@ -117,7 +123,7 @@ body {
   align-items: center;
   background-color: #fff;
   margin: 100px 0 25px 0;
-  padding: 10px 20px;
+  padding: 20px 20px;
   border-radius: 20px;
 
   @include media-breakpoint-down(sm) {
@@ -135,6 +141,7 @@ body {
         font-size: 35px;
       }
     }
+
     p {
       @include media-breakpoint-down(sm) {
         font-size: 20px;
@@ -153,6 +160,7 @@ body {
       height: 100%;
       width: 100%;
     }
+
     .find {
       position: relative;
       align-items: center;
@@ -174,6 +182,7 @@ body {
           width: 100%;
         }
       }
+
       .bi {
         position: absolute;
         top: 0.8rem;
@@ -210,8 +219,10 @@ body {
           width: 100%;
         }
       }
+
       .bi {
         margin-left: 20px;
+
         @include media-breakpoint-down(sm) {
           margin-left: auto;
         }
@@ -224,13 +235,15 @@ body {
   border-radius: 20px;
   height: 420px;
 
+  &.loading {
+    height: auto;
+  }
+
   @include media-breakpoint-down(sm) {
     height: auto;
     margin-bottom: 20px;
   }
-  &.loading {
-    height: auto;
-  }
+
   .card-head {
     position: relative;
     display: flex;
@@ -240,9 +253,11 @@ body {
 
     h2 {
       font-size: 15px;
+
       @include media-breakpoint-down(sm) {
         font-size: 13px;
       }
+
       span {
         color: $primary-color;
       }
@@ -263,9 +278,11 @@ body {
       display: flex;
       align-items: center;
     }
+
     .card-body-photo {
       margin-bottom: 10px;
       text-align: center;
+
       img {
         width: 150px;
         height: 150px;
@@ -277,6 +294,7 @@ body {
           margin-right: 20px;
         }
       }
+
       .dot {
         height: 150px;
         width: 150px;
@@ -284,28 +302,32 @@ body {
         display: inline-block;
       }
     }
+
     .card-body-detail {
       h2 {
         font-size: 12px;
         font-weight: bold;
         margin-bottom: 0;
       }
+
       p {
         font-size: 15px;
         font-weight: lighter;
         margin-bottom: 5px;
       }
+
       @include media-breakpoint-down(sm) {
         h2:nth-child(n + 5) {
           display: none;
         }
+
         p:nth-child(n + 5) {
           display: none;
         }
+
         h2,
         p {
           font-size: 14px;
-          // margin-bottom: 10px;
         }
       }
     }
@@ -317,17 +339,19 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+
   .page-item {
     &.disabled {
       background-color: transparent;
       border: none;
       cursor: no-drop;
-      color: grey;
+
       .page-link {
         background-color: transparent;
       }
     }
   }
+
   .page-link {
     background-color: transparent;
     border: none;
