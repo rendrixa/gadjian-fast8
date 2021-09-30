@@ -13,28 +13,28 @@ export const CardItem = ({ items, isLoading }) => {
                   <div className="col-lg-3 col-md-4 col-sm-12" key={index}>
                     <div className="card loading bg-light ">
                       <div className="card-head">
-                        <h2
+                        <p
                           className="bg-secondary rounded-pill  "
                           style={{ width: "70px", height: "10px" }}
-                        ></h2>
+                        ></p>
                       </div>
                       <div className="card-body">
                         <div className="card-body-photo me-3">
                           <span className="dot bg-secondary"></span>
                         </div>
                         <div className="card-body-detail">
-                          <h2
+                          <p
                             className="bg-secondary rounded-pill "
                             style={{ width: "40px", height: "10px" }}
-                          ></h2>
+                          ></p>
                           <p
                             className="bg-secondary rounded-pill "
                             style={{ width: "70px", height: "10px" }}
                           ></p>
-                          <h2
+                          <p
                             className="bg-secondary rounded-pill "
                             style={{ width: "40px", height: "10px" }}
-                          ></h2>
+                          ></p>
                           <p
                             className="bg-secondary rounded-pill "
                             style={{ width: "70px", height: "10px" }}

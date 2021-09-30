@@ -33,7 +33,7 @@ export const Sidebar = ({ openSidebar, setOpenSidebar }) => {
           </li>
           <li className="nav-item ">
             <NavLink
-              to="/personnel"
+              to="/"
               className="nav-link"
               activeClassName="active"
               onClick={handleClick}
