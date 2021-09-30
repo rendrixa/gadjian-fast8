@@ -1,5 +1,6 @@
 {
-  "name": "http://gadjian-fast8.github.io/beranda",
+  "homepage": "https://rendrixa.github.io/gadjian-fast8/",
+  "name": "gadjian",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
